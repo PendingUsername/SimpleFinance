@@ -4,6 +4,7 @@
         <Balance />
         <Expenses />
         <Transactions />
+        <add/>
     </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from './components/Header.vue';
 import Balance from './components/Balance.vue'
 import Expenses from './components/Expenses.vue';
 import Transactions from './components/Transactions.vue';
+import Add from './components/Add.vue';
 
 export default {
     components: {
@@ -19,6 +21,7 @@ export default {
         Balance,
         Expenses,
         Transactions,
+        Add,
     },
 
 };
