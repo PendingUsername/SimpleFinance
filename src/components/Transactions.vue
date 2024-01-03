@@ -8,24 +8,17 @@
       </ul>
     </div>
   </template>
-  
-  <script>
-  export default {
-    setup() {
-        const transactions = [
-          { id: 1, name: 'Cash', amount: -400 },
-          { id: 2, name: 'Paycheck', amount: 800 },
-          { id: 3, name: 'Computer', amount: -800 },
-          { id: 4, name: 'Paycheck', amount: 800 }
-        ];
 
-        return {
-            transactions,
-        }
-    },
-  };
-  </script>
-  
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+    transactions: {
+        type: Array,
+        required: true
+    }
+});
+</script>
   <style>
   .list {
     list-style-type: none;
