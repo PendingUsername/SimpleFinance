@@ -56,3 +56,10 @@ Install dependencies:
 
 ```sh
 npm install
+```
+## How to use
+- **Clone this repository to your local machine.**
+- **Install dependencies using npm install.**
+- **Run the development server with npm run dev.**
+- **Open the application in your browser and start managing your finances!**
+
