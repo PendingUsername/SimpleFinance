@@ -19,14 +19,17 @@
   
   import { toastInjectionKey, useToast } from 'vue-toastification';
   
-  import { ref, computed } from 'vue';
+  import { ref, computed, onMounted } from 'vue';
   
-  const transactions = ref([
-    { id: 1, name: 'Cash', amount: -400 },
-    { id: 2, name: 'Paycheck', amount: 800 },
-    { id: 3, name: 'Computer', amount: -800 },
-    { id: 4, name: 'Paycheck', amount: 800 },
-  ]);
+  const transactions = ref([]);
+
+  onMounted(() => {
+    const savedTransactions = JSON.parse(localStorage.getItem('transactions'));
+
+    if (savedTransactions) {
+      transactions.value = savedTransactions;
+    }
+  });
   
   // Total
   const total = computed(() => {
