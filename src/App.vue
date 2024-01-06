@@ -67,6 +67,8 @@
       name,
       amount: signedAmount,
     });
+
+    saveTransactionsToLocalStorage();
   
     toast.success('Transaction Submitted');
   };
@@ -82,8 +84,17 @@
   const handleTransactionDeleted = (id) => {
    transactions.value = transactions.value.filter((transaction) => transaction.id !== id);
 
+   saveTransactionsToLocalStorage();
+
    toast.success('Transaction Deleted');
   };
+  
+
+  // Local Storage
+  const saveTransactionsToLocalStorage = () => {
+    localStorage.setItem('transactions', JSON.stringify(transactions.value));
+  }
+
   </script>
   
   
