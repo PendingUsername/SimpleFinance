@@ -3,7 +3,7 @@
       <h3 style="color: #3498db; text-align: center;">Transaction History</h3>
       <ul id="list" class="list">
         <li v-for="transaction in transactions" :key="transaction.id" :class="{ 'transaction': true, 'minus': transaction.amount < 0, 'plus': transaction.amount > 0 }">
-          {{ transaction.name }} <span>{{ transaction.amount < 0 ? '-' : '+' }}${{ Math.abs(transaction.amount) }}</span><button class="delete-btn">X</button>
+          {{ transaction.name }} <span>{{ transaction.amount < 0 ? '-' : '+' }}${{ Math.abs(transaction.amount) }}</span><button @click="deleteTransaction(transaction.id)" class="delete-btn">X</button>
         </li>
       </ul>
     </div>
@@ -12,12 +12,18 @@
 <script setup>
 import { defineProps } from 'vue';
 
+const emit = defineEmits(['transactionDeleted']);
+
 const props = defineProps({
     transactions: {
         type: Array,
         required: true
     }
 });
+
+const deleteTransaction = (id) => {
+    emit('transactionDeleted', id);
+};
 </script>
   <style>
   .list {
