@@ -27,3 +27,32 @@ npm run dev
 ```sh
 npm run build
 ```
+# Vue Finance App
+
+This template serves as the foundation for developing a finance management application using Vue 3 and Vite. The application helps users track their income, expenses, and overall account balance.
+
+## Features
+
+- **Transaction Tracking:** Record and view a list of transactions including the name, amount, and type (income or expense).
+- **Account Balance:** Monitor your account balance in real-time, factoring in both income and expenses.
+- **Category-wise Summaries:** Track income and expenses separately, providing a clear overview of financial activities.
+- **User-Friendly Interface:** Intuitive and easy-to-use interface for seamless navigation and data entry.
+
+## Technology Stack
+
+- **Vue 3:** A progressive JavaScript framework for building user interfaces.
+- **Vite:** A next-generation front-end tool that provides a faster development experience.
+- **TypeScript:** A statically typed superset of JavaScript for enhanced code quality and development productivity.
+
+## Recommended IDE Setup
+
+- **Visual Studio Code (VSCode):** A powerful code editor for optimal development experience.
+- **Volar Extension:** Vue 3 language support extension for VSCode.
+- **TypeScript Vue Plugin (Volar):** TypeScript support for Vue 3.
+
+## Project Setup
+
+Install dependencies:
+
+```sh
+npm install
