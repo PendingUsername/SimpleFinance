@@ -1,3 +1,4 @@
+## Simple Finance Tracker
 ![Project Image](./public/sft.jpg)
 
 # vue-project
